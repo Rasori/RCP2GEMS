@@ -5,6 +5,8 @@
 #		V1.6:
 #			Minor bug fixes
 #			Modifications for .exe conversion for users with limited IT-skills
+#		V2.0:
+#			Major bug fix
 
 
 #  Author:      Daniel Poulter  mrpilt@gmail.com
@@ -89,7 +91,7 @@ def RCP_to_GEMS(filename, num_of_sats=0, output_filename=None):
 			first_row[0] = 0.0 															# Set time to zero
 			first_row[1] = 0.0 															# Set GPS time to
 
-			if GPSSats_index != 0:
+			if num_of_sats != 0:
 				first_row[Longitude_index] = first_row[Longitude_index] * to_rads			# Convert to radians
 				first_row[Latitude_index] = first_row[Latitude_index] * to_rads				# Convert to radians
 			writer.writerows([first_row])												# Write to output
@@ -98,7 +100,7 @@ def RCP_to_GEMS(filename, num_of_sats=0, output_filename=None):
 			while True: # Runs until exception occurs
 
 				try:
-					current_row  = reader.next()
+					current_row = reader.next()
 				except StopIteration:  # Reached end of file
 					return True, output_filename
 				except ValueError:		# Illegal Character :- Continue on next line
