@@ -1,2 +1,6 @@
 *.LOG
 *.csv
+build
+dist
+*.zip
+*.spec
