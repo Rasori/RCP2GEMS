@@ -1,6 +1,6 @@
 RCP2GEMS.exe for easier use  
 ==================
-The python version is now converted as an executable to make using easier for people that are not comfortable with console. If you are struckling with console grab an installer from python folder but notice that it has limited features.
+The python version is now converted as an executable to make using easier for people that are not comfortable with console. If you are struckling with console grab an installer from python folder but notice that it has limited features. To use the programm select your log file and "open with..." RCP2GEMS.exe. The program will then convert and rename the file automatically. At the moment the minimum satellites value is set to 2 but in **future** there will be some kind settings section where it would be possible to change it.
 
 
 RCP2GEMS
